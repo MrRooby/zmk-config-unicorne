@@ -12,7 +12,7 @@
         display-name = "Default Layout";
         kscan = <&kscan0>; 
         transform = <&default_transform>; 
-    }
+    };
 
     kscan0: kscan0 {
         compatible = "zmk,kscan-gpio-matrix";
