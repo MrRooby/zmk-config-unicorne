@@ -8,14 +8,14 @@
     };
 
 
-    physical_layout0: physical_layout0 {
+    physical_layout0: physical_layout {
         compatible = "zmk,physical-layout";
         display-name = "Default Layout";
         kscan = <&kscan0>; 
         transform = <&default_transform>; 
     }
 
-    kscan0: kscan0 {
+    kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
         diode-direction = "col2row";
         wakeup-source;
@@ -28,7 +28,7 @@
             ;
     };
 
-    default_transform: keymap_transform0 {
+    default_transform: matrix-transform {
         compatible = "zmk,matrix-transform";
         columns = <12>;
         rows = <4>;
