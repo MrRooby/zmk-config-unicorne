@@ -48,8 +48,7 @@ fi
 
 cd "$FIRMWARE_DEST"
 unzip -o firmware.zip
-udisksctl mount -b "$DEVICE"
-sudo mount "$DEVICE" "$MOUNT_POINT"
+MOUNT_POINT=$(udisksctl mount -b "$DEVICE" | awk '{print $4}')
 
 if [[ "$SIDE" == "left" ]]; then
  sudo cp unicorne_left-nice_nano_v2-zmk.uf2 "$MOUNT_POINT"
