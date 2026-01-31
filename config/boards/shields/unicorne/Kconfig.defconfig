@@ -14,4 +14,6 @@ if SHIELD_UNICORNE_LEFT || SHIELD_UNICORNE_RIGHT
   config ZMK_SPLIT
       default y
 
+  config ZMK_DISPLAY
+      default y
 endif
