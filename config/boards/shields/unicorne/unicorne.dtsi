@@ -5,7 +5,7 @@
       zmk,kscan = &kscan0;
       zmk,physical-layout = &physical_layout0;
       zmk,battery = &vbatt;
-      /* zephyr,display = &oled; */
+      zephyr,display = &oled;
     };
 
     vbatt: vbatt {
