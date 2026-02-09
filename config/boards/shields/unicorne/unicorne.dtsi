@@ -8,9 +8,13 @@
       zephyr,display = &oled;
     };
 
-    vbatt: vbatt {
-      compatible = "zmk,battery-nrf-vddh";
-    };
+    widgets {
+      compatible = "zmk,display-widgets";
+      
+      default_status {
+        compatible = "zmk,widget-status";
+      }
+    }
 
     physical_layout0: physical_layout_0 {
       compatible = "zmk,physical-layout";

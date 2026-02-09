@@ -19,8 +19,8 @@
         ;
 };
 
-// replace the following lines for the 128x64 screen by default
-&pro_micro_i2c {
+
+&i2c0 {
     status = "okay";
 
     oled: ssd1306@3c {
@@ -32,9 +32,6 @@
         page-offset = <0>;
         display-offset = <0>;
         multiplex-ratio = <31>;
-        segment-remap;
-        com-invdir;
-        inversion-on;
         prechargep = <0x22>;
     };
 };
