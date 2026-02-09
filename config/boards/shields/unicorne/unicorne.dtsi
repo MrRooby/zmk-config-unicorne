@@ -13,8 +13,8 @@
       
       default_status {
         compatible = "zmk,widget-status";
-      }
-    }
+      };
+    };
 
     physical_layout0: physical_layout_0 {
       compatible = "zmk,physical-layout";
