@@ -6,18 +6,8 @@
       zmk,kscan = &kscan0;
       zmk,physical-layout = &physical_layout0;
       zmk,battery = &vbatt;
-      zephyr,display = &oled;
       zmk,underglow = &led_strip;
     };
-
-    widgets {
-      compatible = "zmk,display-widgets";
-      
-      default_status {
-        compatible = "zmk,widget-status";
-      };
-    };
-
 
     physical_layout0: physical_layout_0 {
       compatible = "zmk,physical-layout";
