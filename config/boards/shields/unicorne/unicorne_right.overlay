@@ -1,4 +1,5 @@
 #include "unicorne.dtsi"
+#include <dt-bindings/led/led.h>
 
 &default_transform {
     col-offset = <6>;
@@ -51,7 +52,9 @@
         chain-length = <5>;
         spi-one-frame = <0x70>;
         spi-zero-frame = <0x40>;
-        color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
+        color-mapping = <LED_COLOR_ID_GREEN 
+                         LED_COLOR_ID_RED 
+                         LED_COLOR_ID_BLUE>;
     };
 };
 
