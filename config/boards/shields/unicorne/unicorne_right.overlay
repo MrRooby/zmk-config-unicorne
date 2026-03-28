@@ -56,10 +56,8 @@
     };
 };
 
-&/ {
-    chosen {
+&chosen {
         zmk,underglow = &led_strip;
-    };
 };
 
 // &i2c0 {
