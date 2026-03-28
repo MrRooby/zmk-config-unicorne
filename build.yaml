@@ -3,8 +3,8 @@ board: ["nice_nano_v2"]
 shield: ["unicorne_left", "unicorne_right"]
 include:
   - board: nice_nano_v2
-    shield: unicorne_left nice_oled
+    shield: unicorne_left
   - board: nice_nano_v2
-    shield: unicorne_right nice_oled
+    shield: unicorne_right
   - board: nice_nano_v2
     shield: settings_reset
