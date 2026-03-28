@@ -58,6 +58,12 @@
     };
 };
 
+/ {
+    chosen {
+        zmk,underglow = &led_strip;
+    };
+};
+
 // &i2c0 {
 //     status = "okay";
 
