@@ -6,6 +6,7 @@
       zmk,physical-layout = &physical_layout0;
       zmk,battery = &vbatt;
       zephyr,display = &oled;
+      zmk,underglow = &led_strip;
     };
 
     widgets {

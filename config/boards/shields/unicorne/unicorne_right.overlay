@@ -1,5 +1,4 @@
 #include "unicorne.dtsi"
-#include <dt-bindings/led/led.h>
 
 &default_transform {
     col-offset = <6>;
@@ -54,10 +53,6 @@
         spi-zero-frame = <0x40>;
         color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
     };
-};
-
-&chosen {
-        zmk,underglow = &led_strip;
 };
 
 // &i2c0 {
