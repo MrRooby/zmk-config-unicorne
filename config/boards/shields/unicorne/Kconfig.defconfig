@@ -15,5 +15,5 @@ if SHIELD_UNICORNE_LEFT || SHIELD_UNICORNE_RIGHT
       default y
 
   config ZMK_DISPLAY
-      default n
+      default y
 endif
