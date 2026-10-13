@@ -1,2 +1,4 @@
 
 .zmk/
+keystats-cli/.venv/
+__pycache__/

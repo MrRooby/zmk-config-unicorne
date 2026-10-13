@@ -1,0 +1,30 @@
+menuconfig ZMK_KEYSTATS
+    bool "Per-key press counter"
+    depends on SETTINGS
+    depends on !ZMK_SPLIT || ZMK_SPLIT_ROLE_CENTRAL
+    help
+      Count presses for every key position and keep the counts in
+      persistent storage. On a split keyboard this runs on the central
+      half, which sees the key events of both halves.
+
+if ZMK_KEYSTATS
+
+config ZMK_KEYSTATS_SAVE_INTERVAL
+    int "Max seconds between flash saves while typing"
+    default 600
+    range 10 86400
+    help
+      Counts are written to flash at most once per interval while keys
+      are being pressed, and additionally whenever the keyboard goes
+      idle or to sleep. A hard power-off can lose up to this much
+      typing.
+
+config ZMK_KEYSTATS_BLE
+    bool "GATT service to read and edit the counters"
+    default y
+    depends on ZMK_BLE
+    help
+      Expose the counters to bonded hosts through an encrypted GATT
+      service that speaks newline-terminated JSON.
+
+endif
