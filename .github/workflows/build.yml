@@ -2,5 +2,17 @@ name: Build ZMK firmware
 on: [push, pull_request, workflow_dispatch]
 
 jobs:
+  # A reusable-workflow job has no steps, so the date comes from a separate job
+  date:
+    runs-on: ubuntu-latest
+    outputs:
+      date: ${{ steps.date.outputs.date }}
+    steps:
+      - id: date
+        run: echo "date=$(TZ=Europe/Warsaw date +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
+
   build:
+    needs: date
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3
+    with:
+      archive_name: corne-firmware-${{ needs.date.outputs.date }}
