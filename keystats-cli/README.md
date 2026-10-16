@@ -163,6 +163,10 @@ may still remember the old list of services.
 3. Last resort: `bluetoothctl remove <MAC>`, clear the Bluetooth profile on the
    keyboard (`BT_CLR` on the lower layer) and pair again.
 
+**"Notify acquired"** or **"NotPermitted"** from BlueZ: another program is
+already listening to the service, for example a heatmap viewer that is still
+open. Only one client can use it at a time; close the other one.
+
 **"The keyboard did not answer in time."** Run the command again. If it keeps
 happening, reconnect the keyboard as in step 1 above.
 
